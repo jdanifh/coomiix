@@ -1,0 +1,8 @@
+{
+  "commitUrlFormat": "https://github.com/jdanifh/coomiix/commit/{{hash}}",
+  "compareUrlFormat": "https://github.com/jdanifh/coomiix/compare/{{previousTag}}...{{currentTag}}",
+  "issueUrlFormat": "https://github.com/jdanifh/coomiix/issues/{{id}}",
+  "scripts": {
+    "postTag": "git push --follow-tags"
+  }
+}
