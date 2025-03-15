@@ -8,10 +8,12 @@
     "build:dev": "ng build --configuration development",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:ci": "ng test --ci --coverage --silent --no-cache",
     "release": "standard-version -t '' --release-as "
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^19.2.2",
     "@angular/cdk": "^19.2.2",
     "@angular/common": "^19.2.0",
     "@angular/compiler": "^19.2.0",

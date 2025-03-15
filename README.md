@@ -1,59 +1,132 @@
 # Coomiix
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+Modern Angular application built with best practices and a comprehensive testing setup.
 
-## Development server
+[![CI](https://github.com/jdanifh/coomiix/actions/workflows/ci.yml/badge.svg)](https://github.com/jdanifh/coomiix/actions/workflows/ci.yml)
 
-To start a local development server, run:
+## 📱 Live Demo
 
-```bash
-ng serve
+- **Application**: [https://jdanifh.github.io/coomiix/](https://jdanifh.github.io/coomiix/)
+- **Coverage Report**: [https://jdanifh.github.io/coomiix/coverage/lcov-report/index.html](https://jdanifh.github.io/coomiix/coverage/lcov-report/index.html)
+
+## 🚀 Features
+
+- Built with Angular 19
+- Material Design components
+- Internationalization (i18n) support
+- Moment.js date handling
+- Unit testing with Jest
+- Continuous Integration with GitHub Actions
+- Code coverage reporting
+
+## 📦 Dependencies
+
+### Core Dependencies
+- Angular 19.2.0
+- Angular Material 19.2.2
+- NGX-Translate 16.0.4
+- RxJS 7.8.0
+
+### Development Dependencies
+- Jest 29.7.0
+- Jest Preset Angular 14.5.3
+- TypeScript 5.7.2
+
+## 🏗️ Project Structure
+
+```
+coomiix/
+├── src/
+│   ├── app/
+│   │   ├── core/             # Core functionality
+│   │   │   ├── api/          # API services
+│   │   │   ├── guards/       # Route guards
+│   │   │   ├── interceptors/ # App interceptors
+│   │   │   ├── models/       # Data models
+│   │   │   ├── providers/    # App providers
+│   │   │   └── services/     # Core services
+│   │   │
+│   │   ├── shared/           # Shared modules
+│   │   │   ├── components/   # Shared components
+│   │   │   ├── directives/   # Shared directives
+│   │   │   └── pipes/        # Shared pipes
+│   │   │
+│   │   └── views/            # Application views
+│   │ 
+│   └── environments/         # Environment config files
+│ 
+├── public/                   # Public assets
+│   └── i18n/                 # Translation files
+│ 
+└── coverage/                 # Test coverage reports
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🔧 Setup & Installation
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+1. Clone the repository
 ```bash
-ng generate component component-name
+git clone https://github.com/jdanifh/coomiix
+cd coomiix
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
+2. Install dependencies
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
-
-To build the project run:
-
+3. Start development server
 ```bash
-ng build
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 🧪 Testing
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
+Run tests with:
 ```bash
-ng test
+npm test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
+For coverage report:
 ```bash
-ng e2e
+npm test -- --coverage
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### Coverage Configuration
 
-## Additional Resources
+Coverage configuration in `jest.config.js`:
+- Reports generated in `coverage/` directory
+- Formats: lcov and text summary
+- Excludes:
+  - Main entry file
+  - Environment files
+  - Module files
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🔄 Continuous Integration
+
+GitHub Actions workflow runs on:
+- Push to main branch
+- Pull requests to main branch
+
+The CI pipeline:
+1. Sets up Node.js environment
+2. Installs dependencies
+3. Runs tests with coverage
+4. Builds the project
+5. Deploys to GitHub Pages:
+   - Application: `/`
+   - Coverage Report: `/coverage/lcov-report/`
+
+### Deployment
+
+The project is automatically deployed to GitHub Pages on successful CI runs:
+- Production build uses `--base-href=/coomiix/` for correct path resolution
+- Both the application and coverage report are deployed
+- Concurrent deployments are queued to prevent conflicts
+- Only deploys from the main branch
+
+## 🌐 Internationalization
+
+Supports multiple languages through @ngx-translate:
+- Default language: es-ES
+- Translation files in `public/i18n/`
+- Date formats adapted per locale
