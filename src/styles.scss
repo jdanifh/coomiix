@@ -2,3 +2,36 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+  --background-color: #121212;
+  --primary-color: #323232;
+  --primary-dark-color: #242424;
+  --primary-light-color: #212121;
+  --primary-text-color: white;
+  --background-text-color: white;
+}
+
+body.light {
+  --background-color: white;
+  --primary-color: #004D40;
+  --primary-dark-color: #00251a;
+  --primary-light-color: #38786a;
+  --primary-text-color: white;
+  --background-text-color: black;
+}
+
+body.dark {
+  --background-color: #121212;
+  --primary-color: #323232;
+  --primary-dark-color: #242424;
+  --primary-light-color: #212121;
+  --primary-text-color: white;
+  --background-text-color: white;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+}

@@ -1,0 +1,23 @@
+<header [class.closed-menu]="closed()">
+  <a routerLink="/" class="title">
+    <span>{{ title() }}</span>
+  </a>
+  <button (click)="toggleMenu()" mat-icon-button aria-label="toggle menu">
+    <mat-icon aria-hidden="true">more_vert</mat-icon>
+  </button>
+  <!-- header slot -->
+  <ng-content select="[header]"></ng-content>
+</header>
+<aside [class.closed-menu]="closed()">
+  <!-- menu slot -->
+  <ng-content select="[menu]">
+    <a routerLink="/" routerLinkActive="active">
+      <mat-icon aria-hidden="true">home</mat-icon>
+      <span>Home</span>
+    </a>
+  </ng-content>
+</aside>
+<main>
+  <!-- content slot -->
+  <ng-content select="[content]"></ng-content>
+</main>
