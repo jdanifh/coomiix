@@ -4,6 +4,8 @@ import { SideMenuComponent } from './side-menu.component';
 import { provideRouter } from '@angular/router';
 import { routes } from '../../../app.routes';
 import { By } from '@angular/platform-browser';
+import { provideLocales } from '../../../core/providers/locale/locale.provider';
+import { HttpBackend } from '@angular/common/http';
 
 describe('SideMenuComponent', () => {
   let component: SideMenuComponent;
@@ -12,7 +14,11 @@ describe('SideMenuComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [SideMenuComponent],
-      providers: [provideRouter(routes)]
+      providers: [
+        provideRouter(routes),
+        provideLocales(),
+        { provide: HttpBackend, useClass: HttpBackend }
+      ]
     })
     .compileComponents();
 
@@ -26,8 +32,8 @@ describe('SideMenuComponent', () => {
   });
 
   it('should render Home button', () => {
-    const home = fixture.debugElement.children[0].query(By.css('span'));
-    expect(home.nativeElement.textContent).toBe('Home');
+    const home = fixture.debugElement.children[0].query(By.css('mat-icon'));
+    expect(home.nativeElement.textContent).toBe('home');
   });
 
   it(`should match snapshot`, () => {

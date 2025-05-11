@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+html {
+  color-scheme: dark;
+  @include mat.theme((
+    color: mat.$violet-palette,
+    typography: Roboto,
+    density: 0
+  ));
+}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -10,6 +20,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --primary-light-color: #212121;
   --primary-text-color: white;
   --background-text-color: white;
+  --mdc-outlined-text-field-label-text-weight: 500;
+  --mdc-outlined-text-field-outline-width: 2px;
+  --mdc-outlined-text-field-container-shape: 16px;
 }
 
 body.light {

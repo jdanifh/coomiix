@@ -2,6 +2,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LayoutComponent } from "./shared/components/layout/layout.component";
 import { SideMenuComponent } from "./shared/components/side-menu/side-menu.component";
+import { LocaleComponent } from "./shared/components/locale/locale.component";
 
 @Component({
   selector: 'app-root',
@@ -10,8 +11,9 @@ import { SideMenuComponent } from "./shared/components/side-menu/side-menu.compo
   imports: [
     RouterOutlet,
     LayoutComponent,
-    SideMenuComponent
-  ],
+    SideMenuComponent,
+    LocaleComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

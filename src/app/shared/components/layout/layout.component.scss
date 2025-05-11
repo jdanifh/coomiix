@@ -20,10 +20,12 @@ header {
     font-size: 2em;
     font-weight: 700;
     padding: 25px;
+    border-radius: 16px;
   }
 
   @media (width < 600px) {
     .title + button {
+      order: 100;
       margin-left: auto;
       margin-right: 25px;
     }
@@ -46,6 +48,8 @@ aside {
   width: 200px;
   padding: 25px;
   transition: all 0.5s ease;
+  background-color: var(--background-color);
+  margin-top: 10px;
 
   ::ng-deep a {
     padding: 25px;

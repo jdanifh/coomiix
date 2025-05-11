@@ -1,3 +1,8 @@
 {
-  "home.title": "Bienvenido a Coomiix"
+  "home.title": "Bienvenido a Coomiix",
+
+  "cmx-side-menu": {
+    "home": "Inicio",
+    "dashboard": "Dashboard"
+  }
 }

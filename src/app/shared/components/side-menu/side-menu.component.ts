@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatRippleModule } from '@angular/material/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'cmx-side-menu',
@@ -11,6 +12,7 @@ import { MatRippleModule } from '@angular/material/core';
     MatIconModule,
     MatButtonModule,
     MatRippleModule,
+    TranslateModule,
   ],
   templateUrl: './side-menu.component.html',
   styleUrl: './side-menu.component.scss',

@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { filter } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { MatRippleModule } from '@angular/material/core';
 
 @Component({
   selector: 'cmx-layout',
@@ -12,6 +13,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
     RouterModule,
     MatIconModule,
     MatButtonModule,
+    MatRippleModule,
   ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',

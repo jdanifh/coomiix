@@ -127,6 +127,6 @@ The project is automatically deployed to GitHub Pages on successful CI runs:
 ## 🌐 Internationalization
 
 Supports multiple languages through @ngx-translate:
-- Default language: es-ES
+- Default language: en-US
 - Translation files in `public/i18n/`
 - Date formats adapted per locale

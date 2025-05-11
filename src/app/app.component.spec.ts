@@ -3,12 +3,18 @@ import { AppComponent } from './app.component';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { By } from '@angular/platform-browser';
+import { provideLocales } from './core/providers/locale/locale.provider';
+import { HttpBackend } from '@angular/common/http';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent],
-      providers: [provideRouter(routes)]
+      providers: [
+        provideRouter(routes),
+        provideLocales(),
+        { provide: HttpBackend, useClass: HttpBackend },
+      ]
     }).compileComponents();
   });
 

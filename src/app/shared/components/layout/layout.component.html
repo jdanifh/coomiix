@@ -1,5 +1,5 @@
 <header [class.closed-menu]="closed()">
-  <a routerLink="/" class="title">
+  <a routerLink="/" class="title" matRipple>
     <span>{{ title() }}</span>
   </a>
   <button (click)="toggleMenu()" mat-icon-button aria-label="toggle menu">
@@ -11,7 +11,7 @@
 <aside [class.closed-menu]="closed()">
   <!-- menu slot -->
   <ng-content select="[menu]">
-    <a routerLink="/" routerLinkActive="active">
+    <a routerLink="/" routerLinkActive="active" matRipple>
       <mat-icon aria-hidden="true">home</mat-icon>
       <span>Home</span>
     </a>

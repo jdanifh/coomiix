@@ -1,0 +1,11 @@
+<button [matMenuTriggerFor]="menu" mat-icon-button aria-label="change locale">
+  <mat-icon aria-hidden="true">language</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  @for (locale of locales; track locale) {
+    <button (click)="changeLocale(locale)" mat-menu-item>
+      <span class="locale">{{ locale | uppercase | slice:0:2 }}</span>
+      <span>{{ locale }}</span>
+    </button>
+  }
+</mat-menu>

@@ -6,12 +6,19 @@ import {TranslateModule, TranslateLoader} from "@ngx-translate/core";
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { registerLocaleData } from '@angular/common';
 
+// EN Locale
+import en from '@angular/common/locales/en';
+registerLocaleData(en);
 // ES Locale
 import 'moment/locale/es';
 import es from '@angular/common/locales/es';
 registerLocaleData(es);
 
-export const DEFAULT_LOCALE = 'es-ES';
+export enum LOCALES {
+  EN = 'en-US',
+  ES = 'es-ES'
+}
+export const DEFAULT_LOCALE = LOCALES.EN;
 
 export const provideLocales = () => {
   return [
