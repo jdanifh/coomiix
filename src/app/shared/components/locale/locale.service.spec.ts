@@ -1,8 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { LocaleService } from './locale.service';
-import { DEFAULT_LOCALE, LOCALES, provideLocales } from '../../../core/providers/locale/locale.provider';
-import { HttpBackend } from '@angular/common/http';
+import { DEFAULT_LOCALE, LOCALES, provideLocalesTest } from '../../../core/providers/locale/locale.provider';
 
 describe('LocaleService', () => {
   let service: LocaleService;
@@ -10,10 +9,7 @@ describe('LocaleService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [],
-      providers: [
-        provideLocales(),
-        { provide: HttpBackend, useClass: HttpBackend },
-      ]
+      providers: [ provideLocalesTest() ]
     });
     service = TestBed.inject(LocaleService);
   });

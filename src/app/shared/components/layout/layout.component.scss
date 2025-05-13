@@ -11,6 +11,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
   background-color: var(--background-color);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 
@@ -21,26 +22,31 @@ header {
     font-weight: 700;
     padding: 25px;
     border-radius: 16px;
+
+    &+ button {
+      margin-right: auto;
+      transition: all 0.5s ease;
+      transform: rotate(270deg);
+    }
+  }
+
+  &.closed-menu .title + button {
+    transform: rotate(0deg);
   }
 
   @media (width < 600px) {
-    .title + button {
-      order: 100;
-      margin-left: auto;
-      margin-right: 25px;
+    .title {
+      margin-right: auto;
+
+      &+ button {
+        order: 100;
+        margin-right: 25px;
+      }
     }
 
     .content {
       flex: 1 1 100%;
     }
-  }
-
-  & .title + button {
-    transition: all 0.5s ease;
-    transform: rotate(270deg);
-  }
-  &.closed-menu .title + button {
-    transform: rotate(0deg);
   }
 }
 

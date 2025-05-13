@@ -4,8 +4,7 @@ import { SideMenuComponent } from './side-menu.component';
 import { provideRouter } from '@angular/router';
 import { routes } from '../../../app.routes';
 import { By } from '@angular/platform-browser';
-import { provideLocales } from '../../../core/providers/locale/locale.provider';
-import { HttpBackend } from '@angular/common/http';
+import { provideLocalesTest } from '../../../core/providers/locale/locale.provider';
 
 describe('SideMenuComponent', () => {
   let component: SideMenuComponent;
@@ -16,8 +15,7 @@ describe('SideMenuComponent', () => {
       imports: [SideMenuComponent],
       providers: [
         provideRouter(routes),
-        provideLocales(),
-        { provide: HttpBackend, useClass: HttpBackend }
+        provideLocalesTest(),
       ]
     })
     .compileComponents();

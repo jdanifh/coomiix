@@ -2,9 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
-import { By } from '@angular/platform-browser';
-import { provideLocales } from './core/providers/locale/locale.provider';
-import { HttpBackend } from '@angular/common/http';
+import { provideLocalesTest } from './core/providers/locale/locale.provider';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -12,8 +10,7 @@ describe('AppComponent', () => {
       imports: [AppComponent],
       providers: [
         provideRouter(routes),
-        provideLocales(),
-        { provide: HttpBackend, useClass: HttpBackend },
+        provideLocalesTest(),
       ]
     }).compileComponents();
   });

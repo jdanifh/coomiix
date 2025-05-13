@@ -1,19 +1,15 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpBackend } from '@angular/common/http';
 import { TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { LOCALE_ID } from '@angular/core';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
-import { provideLocales, DEFAULT_LOCALE } from './locale.provider';
+import { DEFAULT_LOCALE, provideLocalesTest } from './locale.provider';
 
 describe('LocaleProvider', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [],
-      providers: [
-        provideLocales(),
-        { provide: HttpBackend, useClass: HttpBackend },
-      ]
+      providers: [ provideLocalesTest() ]
     });
   });
 

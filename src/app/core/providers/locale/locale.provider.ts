@@ -35,3 +35,10 @@ export const provideLocales = () => {
     })])
   ]
 };
+
+export const provideLocalesTest = () => {
+  return [
+    provideLocales(),
+    { provide: HttpBackend, useClass: HttpBackend },
+  ]
+}
