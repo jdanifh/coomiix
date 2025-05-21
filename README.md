@@ -93,7 +93,7 @@ npm test -- --coverage
 
 ### Coverage Configuration
 
-Coverage configuration in `jest.config.js`:
+Coverage configuration in `jest.config.ts`:
 - Reports generated in `coverage/` directory
 - Formats: lcov and text summary
 - Excludes:

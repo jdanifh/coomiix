@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   preset: 'jest-preset-angular',
   coverageDirectory: 'coverage',
   coverageReporters: ['lcov', 'text-summary'],
