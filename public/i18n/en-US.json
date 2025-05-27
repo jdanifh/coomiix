@@ -4,5 +4,10 @@
   "cmx-side-menu": {
     "home": "Home",
     "dashboard": "Dashboard"
+  },
+
+  "cmx-breadcrumbs": {
+    "Home": "Home"
   }
+
 }

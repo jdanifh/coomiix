@@ -1,0 +1,7 @@
+  @for(breadcrumb of breadcrumbs(); track breadcrumb.title; let last = $last) {
+    @if(!last) {
+      <h3><a [routerLink]="[breadcrumb.path]" routerLinkActive="active" >{{'cmx-breadcrumbs.' +breadcrumb.title | translate}}</a></h3>
+    } @else {
+      <h2>{{'cmx-breadcrumbs.' + breadcrumb.title | translate}}</h2>
+    }
+  }

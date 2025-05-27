@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { LayoutComponent } from "./shared/components/layout/layout.component";
 import { SideMenuComponent } from "./shared/components/side-menu/side-menu.component";
 import { LocaleComponent } from "./shared/components/locale/locale.component";
+import { BreadcrumbsComponent } from "./shared/components/breadcrumbs/breadcrumbs.component";
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ import { LocaleComponent } from "./shared/components/locale/locale.component";
     RouterOutlet,
     LayoutComponent,
     SideMenuComponent,
-    LocaleComponent
+    LocaleComponent,
+    BreadcrumbsComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

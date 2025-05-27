@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 100px;
+
+  @media (width < 600px) {
+    order: 5;
+    flex: 1 1 100%;
+    margin-left: 50px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+a + a, a + h2, h3 + h3, h3 + h2 {
+  &::before {
+    content: "⬤";
+    padding: 5px;
+    font-size: .25em;
+    vertical-align: middle;
+    position: relative;
+    top: -.2em;
+  }
+}
